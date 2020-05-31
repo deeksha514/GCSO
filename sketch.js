@@ -39,13 +39,13 @@ function draw() {
     if(deformation>180)
     {
       car.shapeColor=color(255,0,0);
-      text("damage"+deformation,500,200);
+      text("damage"+round(deformation),500,200);
     }
 
     if(deformation<180 && deformation>100)
     {
       car.shapeColor=color(230,230,0);
-      text("damage"+deformation,500,200);
+      text("damage"+round(deformation),500,200);
     }
 
     if(deformation<100)
