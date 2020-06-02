@@ -7,7 +7,7 @@ function setup() {
  car= createSprite(50, 200, 30, 30);
  car2=createSprite(50,125,30,30);
  car3=createSprite(50,275,30,30);
- wall=createSprite(1500,200,30,height/2);
+ wall=createSprite(1570,200,30,height/2);
  wall.shapecolor=color(80,80,80);
 
  speed=random(35,80);
@@ -29,11 +29,11 @@ function draw() {
   background(0,0,0); 
 
 
-  if(car.isTouching(wall))
+  if(wall.x-car.x<(car.width+wall.width)/2)
   {
     car.velocityX=0;
 
-    var deformation=0.5*weight*speed*speed/22500;
+    var deformation=0.5*weight*speed*speed/22509;
 
     if (deformation>200)
     {
@@ -63,11 +63,11 @@ function draw() {
   car.depth=wall.depth;
   car.depth=car.depth+1;
 
-  if(car2.isTouching(wall))
+  if(wall.x-car2.x<(car2.width+wall.width)/2)
   {
     car2.velocityX=0;
 
-    var deformation=0.5*weight2*speed2*speed2/22500;
+    var deformation=0.5*weight2*speed2*speed2/22509;
 
     if (deformation>200)
     {
@@ -99,7 +99,7 @@ function draw() {
   }
 
 
-  if(car3.isTouching(wall))
+  if(wall.x-car3.x<(car3.width+wall.width)/2)
   {
     car3.velocityX=0;
 
